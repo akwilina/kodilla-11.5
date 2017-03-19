@@ -1,0 +1,38 @@
+body {
+    background-color: #55ACEE;
+    color: white;
+}
+
+main {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 100px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.trigger{
+    border: solid white 1px;
+    height: 40px;
+    width: 200px;
+    background-color: transparent;
+    margin: 30px;
+}
+
+.tweet {
+    height: 40px;
+    width: 200px;
+    border: solid white 1px;
+    margin: 0 auto;
+    color: white;
+    border-radius: 0;
+}
