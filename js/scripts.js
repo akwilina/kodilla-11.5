@@ -2,7 +2,10 @@ $(document).ready(function() {
 	var tweetLink = "https://twitter.com/intent/tweet?text=";
 	var quoteUrl = "http://api.forismatic.com/api/1.0/?method=getQuote&key=867576&format=jsonp&lang=en&jsonp=?";
 
-	function getQuote() { $.getJSON(quoteUrl, createTweet); }
+	function getQuote() {
+		$.getJSON(quoteUrl,
+			createTweet);
+	}
 
 	function createTweet(input) {
 		var tweetText = "Quote of the day - " +
@@ -10,7 +13,7 @@ $(document).ready(function() {
             input.quoteAuthor;
 
 		if (tweetText.length > 140) {
-        	getQuote();
+			getQuote();
 		} else {
 			var tweet = tweetLink +
                 encodeURIComponent(tweetText);
@@ -19,14 +22,10 @@ $(document).ready(function() {
                 input.quoteAuthor);
 			$(".tweet").attr("href", tweet);
 		}
-
-    	if (!input.quoteAuthor.length) {
-    		input.quoteAuthor = "Unknown author";
-    	}
+		if (!input.quoteAuthor.length) {
+			input.quoteAuthor = "Unknown author";
+		}
 	}
-
 	getQuote();
-	$(".trigger").click(function() {
-		getQuote();
-	});
+	$(".trigger").click(getQuote);
 });
