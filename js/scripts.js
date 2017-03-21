@@ -3,7 +3,7 @@ $(document).ready(function() {
 	var quoteUrl = "http://api.forismatic.com/api/1.0/?method=getQuote&key=867576&format=jsonp&lang=en&jsonp=?";
 
 	function getQuote() {
-		$.getJSON(quoteUrl,	createTweet);
+		$.getJSON(quoteUrl, createTweet);
 	}
 
 	function createTweet(input) {
